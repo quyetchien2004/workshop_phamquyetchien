@@ -1,15 +1,10 @@
----
+﻿---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2026-04-17
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 4:
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.

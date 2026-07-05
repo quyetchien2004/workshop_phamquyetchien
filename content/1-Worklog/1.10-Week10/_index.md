@@ -1,15 +1,10 @@
----
+﻿---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-04-17
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 10 Objectives:
 
 * Connect and get acquainted with members of First Cloud AI Journey.

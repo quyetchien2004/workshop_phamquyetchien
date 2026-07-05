@@ -1,14 +1,10 @@
----
+﻿---
 title: "Sharing and Feedback"
-date: 2024-01-01
+date: 2026-04-17
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 > Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
 

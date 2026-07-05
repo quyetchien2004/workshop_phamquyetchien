@@ -1,15 +1,10 @@
----
+﻿---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-04-17
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 10:
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.

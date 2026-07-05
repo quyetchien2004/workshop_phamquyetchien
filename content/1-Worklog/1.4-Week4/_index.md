@@ -1,15 +1,10 @@
----
+﻿---
 title: "Week 4 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-04-17
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 4 Objectives:
 
 * Connect and get acquainted with members of First Cloud AI Journey.

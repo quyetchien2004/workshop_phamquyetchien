@@ -1,4 +1,4 @@
-baseURL = "https://workshop-sample.fcjuni.com/"
+baseURL = "/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
@@ -16,16 +16,16 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "thienlh@thienlu.com"
+  author = "phamquyetchien01256@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
   
 [Languages]
 [Languages.en]
-title = "Internship Report"
+title = "Pham Quyet Chien - Internship Report"
 weight = 1
-languageName = "English"
+label = "English"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
@@ -42,7 +42,7 @@ weight = 20
 [Languages.vi]
 title = "Báo cáo thực tập"
 weight = 2
-languageName = "Tiếng Việt"
+label = "Tiếng Việt"
 
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"

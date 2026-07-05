@@ -1,59 +1,38 @@
 ---
 title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+date: 2026-04-24
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu AWS Free Tier 2025 từ tài liệu được anh/chị hướng dẫn gửi.
+* Hiểu ý nghĩa của Free Tier, credit, Free Plan, Paid Plan và Always Free đối với người mới học AWS.
+* Nhận biết các rủi ro có thể phát sinh chi phí khi thực hành trên AWS.
+* Hình thành cách học AWS an toàn: đọc tài liệu trước, thực hành từng bước nhỏ và theo dõi chi phí thường xuyên.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 6 | - Đọc tài liệu AWS Free Tier 2025 được anh/chị hướng dẫn gửi <br> - Ghi chú các khái niệm mới như Free Tier, credit và Always Free | 24/04/2026 | 24/04/2026 | <https://000001.awsstudygroup.com/vi/1-aws-free-tier-2025-revolution/> |
+| 2 | - Tìm hiểu các điểm mới của AWS Free Tier 2025 <br> - Ghi chú về credit ban đầu, credit bổ sung và các dịch vụ Always Free | 27/04/2026 | 27/04/2026 | <https://000001.awsstudygroup.com/vi/1-aws-free-tier-2025-revolution/> |
+| 3 | - So sánh Free Plan và Paid Plan ở mức tổng quan <br> - Xác định gói phù hợp hơn với người mới bắt đầu học AWS | 28/04/2026 | 28/04/2026 | <https://000001.awsstudygroup.com/vi/1-aws-free-tier-2025-revolution/> |
+| 4 | - Tìm hiểu các trường hợp dễ phát sinh chi phí ngoài ý muốn <br> - Ghi chú các lưu ý về billing, usage, region và giới hạn dịch vụ | 29/04/2026 | 29/04/2026 | <https://000001.awsstudygroup.com/vi/1-aws-free-tier-2025-revolution/> |
+| 5 | - Làm quen với tư duy monitoring và tối ưu chi phí khi học AWS <br> - Tổng hợp kiến thức tuần 2 <br> - Chuẩn bị sang tuần 3 tìm hiểu tài khoản AWS và console | 30/04/2026 | 30/04/2026 | <https://000001.awsstudygroup.com/vi/1-aws-free-tier-2025-revolution/> |
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nắm được ý nghĩa của AWS Free Tier đối với người mới học AWS: giúp thực hành với chi phí thấp hoặc miễn phí trong phạm vi cho phép.
+* Hiểu sơ bộ rằng AWS Free Tier 2025 có credit ban đầu, credit bổ sung qua nhiệm vụ học tập, lựa chọn Free Plan/Paid Plan và các dịch vụ Always Free.
+* Phân biệt được ở mức cơ bản Free Plan phù hợp cho người mới muốn học an toàn, còn Paid Plan cần cẩn trọng hơn vì có thể phát sinh chi phí.
+* Nhận thức được tầm quan trọng của việc theo dõi billing, usage và giới hạn miễn phí để tránh phát sinh chi phí ngoài ý muốn.
+* Biết rằng trước khi thực hành một dịch vụ AWS cần kiểm tra region, giới hạn miễn phí, tài nguyên tạo ra và cách xóa tài nguyên sau khi dùng.
+* Bước đầu hình thành checklist học AWS an toàn:
+  * Đọc tài liệu trước khi thao tác.
+  * Chỉ thực hành đúng phạm vi cần học.
+  * Kiểm tra billing và usage thường xuyên.
+  * Xóa tài nguyên không còn sử dụng.
+* Chuẩn bị được kiến thức nền để tuần tiếp theo bắt đầu tìm hiểu tài khoản AWS, AWS Management Console và các thao tác cơ bản.

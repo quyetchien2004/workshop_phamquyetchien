@@ -1,57 +1,37 @@
 ---
 title: "Week 1 Worklog"
-date: 2024-01-01
+date: 2026-04-17
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Start getting familiar with the First Cloud AI Journey internship program.
+* Understand the internship report requirements and the workshop website format.
+* Learn AWS from an introductory level because I did not have a strong cloud computing foundation at the beginning.
+* Build the habit of taking notes during the learning process for the weekly worklog.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| Friday | - Started the internship period <br> - Got familiar with the report requirements, website structure, and required sections | 17/04/2026 | 17/04/2026 | |
+| Monday | - Learned the general purpose of the First Cloud AI Journey program <br> - Identified the information that should be recorded in the weekly worklog | 20/04/2026 | 20/04/2026 | |
+| Tuesday | - Learned what AWS is and the role of cloud computing <br> - Took notes on basic concepts: cloud computing, region, service, and console | 21/04/2026 | 21/04/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Learned common AWS service groups at a high level <br> - Differentiated Compute, Storage, Database, and Networking at a basic level <br> - Practiced reading AWS Study Group learning materials | 22/04/2026 | 22/04/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Reviewed the layout and content structure of the sample workshop website <br> - Rewrote the notes in my own words <br> - Prepared to study AWS Free Tier in more detail in week 2 | 23/04/2026 | 23/04/2026 | |
 
 ### Week 1 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Understood the initial goals of the internship and how to record weekly learning progress.
+* Understood that AWS is a cloud computing platform that provides many services for deploying, storing, operating, and managing applications.
+* Learned several basic AWS service groups:
+  * Compute: services used to run applications and workloads.
+  * Storage: services used to store data.
+  * Database: managed database services.
+  * Networking: services for network configuration and connectivity.
+* Became familiar with reading AWS learning materials and taking notes on new concepts.
+* Identified that I need to learn AWS from the foundation, move step by step, and focus on understanding before practicing.
+* Prepared the basic foundation needed to study AWS Free Tier and cost-safe AWS learning in week 2.
