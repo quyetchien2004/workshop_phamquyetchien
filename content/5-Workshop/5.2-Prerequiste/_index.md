@@ -71,9 +71,7 @@ VNPAY_BANK_CODE=NCB
 VNPAY_MOCK_ENABLED=false
 ```
 
-{{% notice warning %}}
-Do not include real passwords, SMTP passwords, JWT secrets, or VNPay hash secrets in the public report. Sensitive values should be blurred in screenshots.
-{{% /notice %}}
+
 
 ![Image 03 - IAM users](/workshop_phamquyetchien/images/5-Workshop/5.2-Prerequisite/anh%20aim%20use.png)
 <p class="image-caption">Image 03 - IAM users</p>

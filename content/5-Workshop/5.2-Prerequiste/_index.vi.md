@@ -71,10 +71,6 @@ VNPAY_BANK_CODE=NCB
 VNPAY_MOCK_ENABLED=false
 ```
 
-{{% notice warning %}}
-Không đưa password thật, SMTP password, JWT secret hoặc VNPay hash secret vào báo cáo. Khi chụp màn hình cần che hoặc làm mờ các giá trị nhạy cảm.
-{{% /notice %}}
-
 ![Hình 03 - IAM users của nhóm](/workshop_phamquyetchien/images/5-Workshop/5.2-Prerequisite/anh%20aim%20use.png)
 <p class="image-caption">Hình 03 - IAM users của nhóm</p>
 
