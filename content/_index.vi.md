@@ -15,7 +15,7 @@ chapter: false
 
 &emsp; **Trường:** Trường Đại Học Công Nghệ TP.HCM
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Ngành:** Công nghệ phần mềm
 
 &emsp; **Lớp:** 22DTHD7
 
@@ -23,9 +23,9 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 12/07/2026
+&emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 17/07/2026
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/avatar.jpg)
 
 
 

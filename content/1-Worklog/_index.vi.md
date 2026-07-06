@@ -30,4 +30,4 @@ Trong phần này, em ghi lại quá trình thực tập tại chương trình *
 
 **Tuần 11:** [Hoàn thiện Backend, ALB và test project CCT Hotels Booking](1.11-week11/)
 
-**Tuần 12:** [Hoàn thiện báo cáo, kiểm tra lại project và chuẩn bị trình bày](1.12-week12/)
+**Tuần 12:** [Hoàn thiện báo cáo nhóm và phần Workshop](1.12-week12/)

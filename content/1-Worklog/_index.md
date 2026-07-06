@@ -30,4 +30,4 @@ In this section, I record my 12-week internship progress in the **First Cloud AI
 
 **Week 11:** [Completing Backend, ALB, and testing CCT Hotels Booking](1.11-week11/)
 
-**Week 12:** [Finalizing the report, checking the project, and preparing presentation](1.12-week12/)
+**Week 12:** [Completing the group report and Workshop section](1.12-week12/)

@@ -1,54 +1,32 @@
-﻿---
+---
 title: "Worklog Tuần 12"
-date: 2026-07-03
+date: 2026-07-06
 weight: 12
 chapter: false
 pre: " <b> 1.12 </b> "
 ---
+
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện các nội dung còn lại của báo cáo thực tập.
+* Rà soát lại phần báo cáo nhóm và project **CCT Hotels Booking**.
+* Hoàn thành phần **Workshop** để trình bày quá trình triển khai project trên AWS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 6 | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 03/07/2026 | 03/07/2026 |
-| 2 | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 06/07/2026 | 06/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 07/07/2026 | 07/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 08/07/2026 | 08/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 09/07/2026 | 09/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc đã thực hiện trong tuần này:
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|---|---|---|---|
+| Thứ Hai | - Hoàn thiện nội dung báo cáo của nhóm. <br> - Kiểm tra lại các phần Worklog, Proposal, Blogs Posted, Events Participated, Workshop, Self-evaluation và Feedback. <br> - Chỉnh sửa phần Workshop để mô tả rõ quá trình triển khai CCT Hotels Booking trên AWS. <br> - Kiểm tra lại ảnh minh chứng, link ảnh, cấu trúc song ngữ vi/en và build lại website bằng Hugo. | 06/07/2026 | 06/07/2026 |
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thiện phần báo cáo nhóm theo đúng cấu trúc yêu cầu.
+* Hoàn thành phần **Workshop** cho project **CCT Hotels Booking**.
+* Rà soát lại nội dung tiếng Việt và tiếng Anh trong các phần chính của báo cáo.
+* Kiểm tra lại các ảnh minh chứng, đường dẫn ảnh và các link nội bộ trong website.
+* Build lại project bằng Hugo để đảm bảo website không bị lỗi render.
+* Chuẩn bị bản báo cáo cuối cùng để nộp và trình bày.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Nhận xét cá nhân:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Tuần 12 chủ yếu là giai đoạn tổng hợp và hoàn thiện. Sau khi đã học AWS, làm blog, tham gia event và triển khai project, em tập trung chỉnh lại báo cáo sao cho nội dung rõ ràng, đúng yêu cầu và thể hiện được quá trình làm việc của nhóm. Phần Workshop là phần quan trọng nhất vì nó cho thấy project không chỉ dừng ở ý tưởng mà đã được triển khai theo từng bước trên AWS.
