@@ -17,7 +17,7 @@ The environment `cct-hotels-backend-env-v2` should show:
 - App port: `8080`
 - Health check path: `/api/health`
 
-![Image 13 - Elastic Beanstalk Health OK](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/1.png)
+![Image 13 - Elastic Beanstalk Health OK](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/1.png)
 <p class="image-caption">Image 13 - Elastic Beanstalk Health OK</p>
 
 ## 2. Test API directly through Elastic Beanstalk
@@ -37,7 +37,7 @@ Expected result:
 }
 ```
 
-![Image 14 - Backend health through Elastic Beanstalk](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/2.png)
+![Image 14 - Backend health through Elastic Beanstalk](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/2.png)
 <p class="image-caption">Image 14 - Backend health through Elastic Beanstalk</p>
 
 ## 3. Test API through CloudFront
@@ -56,7 +56,7 @@ https://www.viet70speed.xyz/api/health
 
 If the API returns a healthy JSON response, CloudFront is forwarding API traffic correctly.
 
-![Image 15 - Backend health through CloudFront](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/3.png)
+![Image 15 - Backend health through CloudFront](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/3.png)
 <p class="image-caption">Image 15 - Backend health through CloudFront</p>
 
 ## 4. Test DocumentDB connectivity
@@ -71,10 +71,10 @@ Use application actions that read/write data:
 
 If these actions work, the backend can connect to DocumentDB successfully.
 
-![Image 16 - Registration or login success](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/4.png)
+![Image 16 - Registration or login success](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/4.png)
 <p class="image-caption">Image 16 - Registration or login success</p>
 
-![Image 17 - Booking saved in the system](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/5.png)
+![Image 17 - Booking saved in the system](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/5.png)
 <p class="image-caption">Image 17 - Booking saved in the system</p>
 
 ## 5. Common issues

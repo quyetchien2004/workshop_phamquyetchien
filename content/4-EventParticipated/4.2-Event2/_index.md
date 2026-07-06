@@ -82,4 +82,4 @@ In this event, I participated as an attendee. I followed the sessions, reviewed 
 
 ## Participation Evidence
 
-![FCAJ Meetup - Event 2](/images/event/even2.jpg)
+![FCAJ Meetup - Event 2](/workshop_phamquyetchien/images/event/even2.jpg)

@@ -33,13 +33,13 @@ Hiện tại SES vẫn đang ở Sandbox nên email chỉ gửi được giữa 
 
 Hướng xử lý sau demo là hoàn tất DKIM cho domain và gửi yêu cầu production access để SES cho phép gửi ra ngoài danh sách email đã verify.
 
-![Hình 33 - SES verified identity](/images/5-Workshop/5.5-SES-vnpay/1.png)
+![Hình 33 - SES verified identity](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/1.png)
 <p class="image-caption">Hình 33 - SES verified identity</p>
 
-![Hình 34 - SES DKIM records ở Namecheap](/images/5-Workshop/5.5-SES-vnpay/2.png)
+![Hình 34 - SES DKIM records ở Namecheap](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/2.png)
 <p class="image-caption">Hình 34 - SES DKIM records ở Namecheap</p>
 
-![Hình 35 - OTP email nhận được](/images/5-Workshop/5.5-SES-vnpay/3.png)
+![Hình 35 - OTP email nhận được](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/3.png)
 <p class="image-caption">Hình 35 - OTP email nhận được</p>
 
 ## 2. Cấu hình VNPay sandbox
@@ -65,13 +65,13 @@ Luồng thanh toán:
 5. CloudFront forward `/api/payments/vnpay/*` về backend.
 6. Backend kiểm tra secure hash và cập nhật trạng thái booking/payment.
 
-![Hình 36 - VNPay environment variables](/images/5-Workshop/5.5-SES-vnpay/4.png)
+![Hình 36 - VNPay environment variables](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/4.png)
 <p class="image-caption">Hình 36 - VNPay environment variables</p>
 
-![Hình 37 - Trang thanh toán VNPay sandbox](/images/5-Workshop/5.5-SES-vnpay/5.png)
+![Hình 37 - Trang thanh toán VNPay sandbox](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/5.png)
 <p class="image-caption">Hình 37 - Trang thanh toán VNPay sandbox</p>
 
-![Hình 38 - Kết quả thanh toán và trạng thái booking](/images/5-Workshop/5.5-SES-vnpay/6.png)
+![Hình 38 - Kết quả thanh toán và trạng thái booking](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/6.png)
 <p class="image-caption">Hình 38 - Kết quả thanh toán và trạng thái booking</p>
 
 ## 3. Lỗi thường gặp

@@ -28,7 +28,7 @@ VITE_SOCKET_URL=https://d2r7fm91wsef8d.cloudfront.net
 
 Do not use `localhost` in production builds.
 
-![Image 20 - Frontend production env file](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/1.png)
+![Image 20 - Frontend production env file](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/1.png)
 <p class="image-caption">Image 20 - Frontend production env file</p>
 
 ## 2. Build frontend
@@ -47,7 +47,7 @@ npm run build
 
 After a successful build, `frontend/dist` contains `index.html` and the `assets/` folder.
 
-![Image 21 - Frontend build success](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/2.png)
+![Image 21 - Frontend build success](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/2.png)
 <p class="image-caption">Image 21 - Frontend build success</p>
 
 ## 3. Upload to S3
@@ -59,7 +59,7 @@ Open AWS Console > S3:
 3. Select all files and folders **inside** `frontend/dist`; do not upload the `dist` folder itself.
 4. Click **Upload**.
 
-![Image 22 - Upload frontend dist to S3](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/3.png)
+![Image 22 - Upload frontend dist to S3](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/3.png)
 <p class="image-caption">Image 22 - Upload frontend dist to S3</p>
 
 ## 4. Create CloudFront invalidation
@@ -72,7 +72,7 @@ After each new frontend upload, clear CloudFront cache:
 4. Click **Create invalidation**.
 5. Enter object path: `/*`.
 
-![Image 23 - CloudFront invalidation](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/4.png)
+![Image 23 - CloudFront invalidation](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/4.png)
 <p class="image-caption">Image 23 - CloudFront invalidation</p>
 
 

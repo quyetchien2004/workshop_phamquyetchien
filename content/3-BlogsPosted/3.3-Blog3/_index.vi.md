@@ -8,7 +8,7 @@ pre: " <b> 3.3. </b> "
 
 # [AWS Resilience] Đơn giản hóa Disaster Recovery với AWS Backup, AWS DRS và Arpio
 
-![Disaster Recovery với AWS Backup, AWS DRS và Arpio](/images/blog/blog3.png)
+![Disaster Recovery với AWS Backup, AWS DRS và Arpio](/workshop_phamquyetchien/images/blog/blog3.png)
 
 Xây dựng một giải pháp Disaster Recovery (DR) toàn diện trên AWS không chỉ đơn giản là sao lưu dữ liệu. Để đảm bảo tính liên tục của dịch vụ, doanh nghiệp cần có khả năng phục hồi toàn bộ workload khi xảy ra sự cố, bao gồm dữ liệu, tài nguyên tính toán, hạ tầng mạng, cấu hình và các thành phần phụ thuộc khác.
 

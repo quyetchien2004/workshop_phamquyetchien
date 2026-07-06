@@ -26,7 +26,7 @@ Check the main pages:
 - Booking page.
 - Admin pages if an admin account is available.
 
-![Image 30 - Production homepage](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/1.png)
+![Image 30 - Production homepage](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/1.png)
 <p class="image-caption">Image 30 - Production homepage</p>
 
 ## 2. Check frontend API calls
@@ -39,7 +39,7 @@ https://www.viet70speed.xyz/api/...
 
 They should not call `localhost`.
 
-![Image 31 - Frontend calls production API](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/2.png)
+![Image 31 - Frontend calls production API](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/2.png)
 <p class="image-caption">Image 31 - Frontend calls production API</p>
 
 ## 3. Test SPA routes
@@ -58,7 +58,7 @@ If they do not return 403/404, the CloudFront SPA fallback is working.
 
 The browser should show a valid HTTPS connection. When clicking the lock icon, the certificate should be issued for `viet70speed.xyz` or `www.viet70speed.xyz`.
 
-![Image 32 - HTTPS certificate on domain](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/3.png)
+![Image 32 - HTTPS certificate on domain](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/3.png)
 <p class="image-caption">Image 32 - HTTPS certificate on domain</p>
 
 

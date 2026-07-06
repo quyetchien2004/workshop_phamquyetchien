@@ -8,7 +8,7 @@ pre: " <b> 3.3. </b> "
 
 # [AWS Resilience] Simplifying Disaster Recovery with AWS Backup, AWS DRS, and Arpio
 
-![Disaster Recovery with AWS Backup, AWS DRS, and Arpio](/images/blog/blog3.png)
+![Disaster Recovery with AWS Backup, AWS DRS, and Arpio](/workshop_phamquyetchien/images/blog/blog3.png)
 
 Building a complete Disaster Recovery (DR) solution on AWS is not only about backing up data. To maintain service continuity, businesses need to recover the full workload during an incident, including data, compute resources, network infrastructure, configuration, and other dependencies.
 

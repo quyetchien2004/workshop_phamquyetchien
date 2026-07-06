@@ -40,7 +40,7 @@ Giải pháp AWS giúp tách từng thành phần ra đúng dịch vụ, chỉ p
 ### 4. Kiến trúc giải pháp
 Kiến trúc được thiết kế theo nhiều lớp, gồm lớp truy cập người dùng, lớp phân phối nội dung, lớp backend, lớp database, lớp email và lớp thanh toán bên ngoài.
 
-![CCT Hotels Booking AWS Architecture](/images/2-Proposal/anh%201.jpg)
+![CCT Hotels Booking AWS Architecture](/workshop_phamquyetchien/images/2-Proposal/anh%201.jpg)
 
 #### Các dịch vụ AWS sử dụng
 - **Amazon S3**: Lưu trữ frontend đã build từ React/Vite và phục vụ static assets.

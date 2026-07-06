@@ -27,10 +27,10 @@ VPC `cct-hotels-vpc` dùng CIDR `10.0.0.0/16`, chia thành hai Availability Zone
 4. App Server kết nối DocumentDB qua security group nội bộ.
 5. App Server gọi SES để gửi email và gọi VNPay để tạo URL thanh toán.
 
-![Hình 05 - VPC resource map](/images/5-Workshop/5.3-Network-backend-database/1.png)
+![Hình 05 - VPC resource map](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/1.png)
 <p class="image-caption">Hình 05 - VPC resource map</p>
 
-![Hình 06 - Route tables public/private](/images/5-Workshop/5.3-Network-backend-database/2.png)
+![Hình 06 - Route tables public/private](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/2.png)
 <p class="image-caption">Hình 06 - Route tables public/private</p>
 
 

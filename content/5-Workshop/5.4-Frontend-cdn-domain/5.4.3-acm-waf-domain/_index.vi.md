@@ -21,7 +21,7 @@ www.viet70speed.xyz
 
 Chọn DNS validation, sau đó copy các CNAME validation record sang Namecheap.
 
-![Hình 27 - ACM certificate Issued](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/1.png)
+![Hình 27 - ACM certificate Issued](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/1.png)
 <p class="image-caption">Hình 27 - ACM certificate Issued</p>
 
 ## 2. Thêm alternate domain names vào CloudFront
@@ -49,7 +49,7 @@ Với root domain `viet70speed.xyz`, tùy cấu hình Namecheap có thể dùng 
 Không xóa các CNAME validation của ACM. Nếu xóa, certificate có thể mất khả năng tự gia hạn sau này.
 {{% /notice %}}
 
-![Hình 28 - DNS records ở Namecheap](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/2.png)
+![Hình 28 - DNS records ở Namecheap](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/2.png)
 <p class="image-caption">Hình 28 - DNS records ở Namecheap</p>
 
 ## 4. Gắn AWS WAF vào CloudFront
@@ -61,7 +61,7 @@ Tạo Web ACL cho CloudFront, scope chọn **CloudFront distributions**. Có th�
 - AWSManagedRulesSQLiRuleSet
 - Rate-based rule nếu muốn giới hạn request bất thường
 
-![Hình 29 - AWS WAF Web ACL](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/3.png)
+![Hình 29 - AWS WAF Web ACL](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/3.png)
 <p class="image-caption">Hình 29 - AWS WAF Web ACL</p>
 
 

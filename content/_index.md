@@ -27,7 +27,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 17/04/2026 to 17/07/2026
 
-![Your profile picture](/images/avatar.jpg)
+![Your profile picture](/workshop_phamquyetchien/images/avatar.jpg)
 
 ### Report Content
 

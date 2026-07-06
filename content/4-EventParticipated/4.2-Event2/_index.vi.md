@@ -82,4 +82,4 @@ Trong sự kiện này, em tham gia với vai trò người nghe. Em theo dõi c
 
 ## Hình ảnh minh chứng
 
-![FCAJ Meetup - Event 2](/images/event/even2.jpg)
+![FCAJ Meetup - Event 2](/workshop_phamquyetchien/images/event/even2.jpg)

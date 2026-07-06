@@ -8,7 +8,7 @@ pre: " <b> 3.1. </b> "
 
 # What if Kubernetes loses an entire Region? AWS Backup can help you recover
 
-![Kubernetes Cross-Region DR with AWS Backup](/images/blog/blog1.png)
+![Kubernetes Cross-Region DR with AWS Backup](/workshop_phamquyetchien/images/blog/blog1.png)
 
 Many teams already run EKS with Multi-AZ, but Multi-AZ is not enough if an entire AWS Region has a serious outage. For systems with strict RTO/RPO requirements, such as fintech, ecommerce, or healthcare, a real Cross-Region DR plan is necessary.
 

@@ -75,10 +75,10 @@ VNPAY_MOCK_ENABLED=false
 Do not include real passwords, SMTP passwords, JWT secrets, or VNPay hash secrets in the public report. Sensitive values should be blurred in screenshots.
 {{% /notice %}}
 
-![Image 03 - IAM users](/images/5-Workshop/5.2-Prerequisite/anh%20aim%20use.png)
+![Image 03 - IAM users](/workshop_phamquyetchien/images/5-Workshop/5.2-Prerequisite/anh%20aim%20use.png)
 <p class="image-caption">Image 03 - IAM users</p>
 
-![Image 04 - Namecheap domain](/images/5-Workshop/5.2-Prerequisite/domain.png)
+![Image 04 - Namecheap domain](/workshop_phamquyetchien/images/5-Workshop/5.2-Prerequisite/domain.png)
 <p class="image-caption">Image 04 - Namecheap domain</p>
 
 

@@ -40,7 +40,7 @@ The proposed AWS architecture solves these issues by deploying each layer to the
 ### 4. Solution Architecture
 The solution uses a layered AWS architecture:
 
-![CCT Hotels Booking AWS Architecture](/images/2-Proposal/anh%201.jpg)
+![CCT Hotels Booking AWS Architecture](/workshop_phamquyetchien/images/2-Proposal/anh%201.jpg)
 
 #### Main AWS Services
 - **Amazon S3**: Hosts the React/Vite production build and stores static frontend assets.

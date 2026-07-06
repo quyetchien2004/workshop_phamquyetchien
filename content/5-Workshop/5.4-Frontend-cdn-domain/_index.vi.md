@@ -25,10 +25,10 @@ Các thành phần chính:
 - ACM certificate: tạo ở `us-east-1` để dùng cho CloudFront
 - WAF Web ACL: gắn vào CloudFront
 
-![Hình 18 - S3 bucket frontend](/images/5-Workshop/5.4-Frontend-cdn-domain/1.png)
+![Hình 18 - S3 bucket frontend](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/1.png)
 <p class="image-caption">Hình 18 - S3 bucket frontend</p>
 
-![Hình 19 - CloudFront distribution](/images/5-Workshop/5.4-Frontend-cdn-domain/2.png)
+![Hình 19 - CloudFront distribution](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/2.png)
 <p class="image-caption">Hình 19 - CloudFront distribution</p>
 
 

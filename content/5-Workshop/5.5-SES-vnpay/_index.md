@@ -33,13 +33,13 @@ At this stage, SES is still in Sandbox, so email can only be sent to verified ad
 
 The remaining step after the demo is to complete domain DKIM verification and request production access for SES.
 
-![Image 33 - SES verified identity](/images/5-Workshop/5.5-SES-vnpay/1.png)
+![Image 33 - SES verified identity](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/1.png)
 <p class="image-caption">Image 33 - SES verified identity</p>
 
-![Image 34 - SES DKIM records in Namecheap](/images/5-Workshop/5.5-SES-vnpay/2.png)
+![Image 34 - SES DKIM records in Namecheap](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/2.png)
 <p class="image-caption">Image 34 - SES DKIM records in Namecheap</p>
 
-![Image 35 - Received OTP email](/images/5-Workshop/5.5-SES-vnpay/3.png)
+![Image 35 - Received OTP email](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/3.png)
 <p class="image-caption">Image 35 - Received OTP email</p>
 
 ## 2. Configure VNPay sandbox
@@ -65,13 +65,13 @@ Payment flow:
 5. CloudFront forwards `/api/payments/vnpay/*` to the backend.
 6. Backend verifies the secure hash and updates booking/payment status.
 
-![Image 36 - VNPay environment variables](/images/5-Workshop/5.5-SES-vnpay/4.png)
+![Image 36 - VNPay environment variables](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/4.png)
 <p class="image-caption">Image 36 - VNPay environment variables</p>
 
-![Image 37 - VNPay sandbox payment page](/images/5-Workshop/5.5-SES-vnpay/5.png)
+![Image 37 - VNPay sandbox payment page](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/5.png)
 <p class="image-caption">Image 37 - VNPay sandbox payment page</p>
 
-![Image 38 - Payment result and booking status](/images/5-Workshop/5.5-SES-vnpay/6.png)
+![Image 38 - Payment result and booking status](/workshop_phamquyetchien/images/5-Workshop/5.5-SES-vnpay/6.png)
 <p class="image-caption">Image 38 - Payment result and booking status</p>
 
 ## 3. Common issues

@@ -21,7 +21,7 @@ www.viet70speed.xyz
 
 Choose DNS validation, then copy the generated CNAME validation records to Namecheap.
 
-![Image 27 - ACM certificate Issued](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/1.png)
+![Image 27 - ACM certificate Issued](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/1.png)
 <p class="image-caption">Image 27 - ACM certificate Issued</p>
 
 ## 2. Add alternate domain names to CloudFront
@@ -49,7 +49,7 @@ For the root domain `viet70speed.xyz`, depending on Namecheap support, use URL R
 Do not delete ACM validation CNAME records. Deleting them may prevent automatic certificate renewal later.
 {{% /notice %}}
 
-![Image 28 - DNS records in Namecheap](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/2.png)
+![Image 28 - DNS records in Namecheap](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/2.png)
 <p class="image-caption">Image 28 - DNS records in Namecheap</p>
 
 ## 4. Attach AWS WAF to CloudFront
@@ -61,7 +61,7 @@ Create a Web ACL for CloudFront with scope **CloudFront distributions**. Recomme
 - AWSManagedRulesSQLiRuleSet
 - Optional rate-based rule for unusual traffic spikes
 
-![Image 29 - AWS WAF Web ACL](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/3.png)
+![Image 29 - AWS WAF Web ACL](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.3-acm-waf-domain/3.png)
 <p class="image-caption">Image 29 - AWS WAF Web ACL</p>
 
 

@@ -8,7 +8,7 @@ pre: " <b> 3.2. </b> "
 
 # [AWS Organizations] Triển khai AWS Organizations bằng CloudFormation
 
-![AWS Organizations bằng CloudFormation](/images/blog/blog2.png)
+![AWS Organizations bằng CloudFormation](/workshop_phamquyetchien/images/blog/blog2.png)
 
 Chào anh em AWS Study Group VN!
 

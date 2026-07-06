@@ -103,4 +103,4 @@ Trong event này, em tham gia với vai trò người nghe. Em theo dõi các ph
 
 ## Hình ảnh minh chứng
 
-![FCAJ Community Day - Event 1](/images/event/even1.jpg)
+![FCAJ Community Day - Event 1](/workshop_phamquyetchien/images/event/even1.jpg)

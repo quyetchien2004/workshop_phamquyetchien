@@ -38,7 +38,7 @@ After completing the workshop:
 - SES can send OTP or system emails.
 - VNPay sandbox can create a payment page and callback to the system.
 
-![Image 01 - Overall architecture diagram](/images/5-Workshop/5.1-Workshop-overview/anh%201.jpg)
+![Image 01 - Overall architecture diagram](/workshop_phamquyetchien/images/5-Workshop/5.1-Workshop-overview/anh%201.jpg)
 <p class="image-caption">Image 01 - Overall architecture diagram</p>
 
 

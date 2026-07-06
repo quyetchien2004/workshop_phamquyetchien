@@ -36,7 +36,7 @@ Khi triển khai lên AWS, nhóm chia hệ thống thành ba lớp chính:
 - SES gửi được email OTP hoặc email hệ thống.
 - VNPay sandbox tạo được trang thanh toán và callback về hệ thống.
 
-![Hình 01 - Sơ đồ kiến trúc tổng thể](/images/5-Workshop/5.1-Workshop-overview/anh%201.jpg)
+![Hình 01 - Sơ đồ kiến trúc tổng thể](/workshop_phamquyetchien/images/5-Workshop/5.1-Workshop-overview/anh%201.jpg)
 <p class="image-caption">Hình 01 - Sơ đồ kiến trúc tổng thể</p>
 
 

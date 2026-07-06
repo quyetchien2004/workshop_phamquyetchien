@@ -44,13 +44,13 @@ This keeps backend EC2 instances private while still allowing them to reach exte
 
 Do not expose DocumentDB to `0.0.0.0/0`.
 
-![Image 07 - ALB security group](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/1.png)
+![Image 07 - ALB security group](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/1.png)
 <p class="image-caption">Image 07 - ALB security group</p>
 
-![Image 08 - App Server security group](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/2.png)
+![Image 08 - App Server security group](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/2.png)
 <p class="image-caption">Image 08 - App Server security group</p>
 
-![Image 09 - DocumentDB security group](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/3.png)
+![Image 09 - DocumentDB security group](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/3.png)
 <p class="image-caption">Image 09 - DocumentDB security group</p>
 
 ## 4. Create Amazon DocumentDB
@@ -74,7 +74,7 @@ mongodb://cctadmin:<password>@cct-hotels-docdb.cluster-xxxxx.ap-southeast-1.docd
 
 The `global-bundle.pem` file must be included in the backend source bundle so Node.js can establish a TLS connection to DocumentDB.
 
-![Image 10 - DocumentDB cluster Available](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/4.png)
+![Image 10 - DocumentDB cluster Available](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/4.png)
 <p class="image-caption">Image 10 - DocumentDB cluster Available</p>
 
 ## 5. Deploy backend with Elastic Beanstalk
@@ -97,10 +97,10 @@ The source bundle should include this `Procfile`:
 web: npm run start --workspace backend
 ```
 
-![Image 11 - Elastic Beanstalk configuration](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/5.png)
+![Image 11 - Elastic Beanstalk configuration](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/5.png)
 <p class="image-caption">Image 11 - Elastic Beanstalk configuration</p>
 
-![Image 12 - Elastic Beanstalk environment variables](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/6.png)
+![Image 12 - Elastic Beanstalk environment variables](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/6.png)
 <p class="image-caption">Image 12 - Elastic Beanstalk environment variables</p>
 
 

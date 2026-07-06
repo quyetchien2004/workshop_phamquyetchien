@@ -25,7 +25,7 @@ Kiểm thử các chức năng chính:
 - Admin xem/duyệt booking.
 - Socket.IO hoặc thông báo realtime nếu có dùng trong trang admin.
 
-![Hình 39 - Kịch bản kiểm thử end-to-end](/images/5-Workshop/5.6-Final-test-cleanup/1.png)
+![Hình 39 - Kịch bản kiểm thử end-to-end](/workshop_phamquyetchien/images/5-Workshop/5.6-Final-test-cleanup/1.png)
 <p class="image-caption">Hình 39 - Kịch bản kiểm thử end-to-end</p>
 
 ## 2. Theo dõi log khi có lỗi
@@ -38,7 +38,7 @@ Các nơi cần kiểm tra log:
 - DocumentDB > Cluster events hoặc CloudWatch metrics.
 - Browser DevTools > Network: lỗi API từ frontend.
 
-![Hình 40 - Elastic Beanstalk logs hoặc health](/images/5-Workshop/5.6-Final-test-cleanup/2.png)
+![Hình 40 - Elastic Beanstalk logs hoặc health](/workshop_phamquyetchien/images/5-Workshop/5.6-Final-test-cleanup/2.png)
 <p class="image-caption">Hình 40 - Elastic Beanstalk logs hoặc health</p>
 
 ## 3. Dọn dẹp tài nguyên để tránh phát sinh chi phí
@@ -58,7 +58,7 @@ Khi demo xong hoặc không còn sử dụng, cần dọn các tài nguyên tố
 DocumentDB, NAT Gateway, ALB và EC2 là các thành phần dễ phát sinh chi phí. Nếu chỉ làm báo cáo/demo, nên stop/delete đúng lúc và kiểm tra Billing Dashboard.
 {{% /notice %}}
 
-![Hình 41 - AWS Billing hoặc danh sách tài nguyên cần dọn](/images/5-Workshop/5.6-Final-test-cleanup/3.png)
+![Hình 41 - AWS Billing hoặc danh sách tài nguyên cần dọn](/workshop_phamquyetchien/images/5-Workshop/5.6-Final-test-cleanup/3.png)
 <p class="image-caption">Hình 41 - AWS Billing hoặc danh sách tài nguyên cần dọn</p>
 
 ## 4. Kết luận workshop

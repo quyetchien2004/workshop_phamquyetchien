@@ -8,7 +8,7 @@ pre: " <b> 3.1. </b> "
 
 # Kubernetes bị sập cả Region thì sao? Đây là cách AWS Backup giúp bạn phục hồi
 
-![Kubernetes Cross-Region DR với AWS Backup](/images/blog/blog1.png)
+![Kubernetes Cross-Region DR với AWS Backup](/workshop_phamquyetchien/images/blog/blog1.png)
 
 Nhiều team chạy EKS đã có multi-AZ, nhưng nếu cả một AWS Region gặp sự cố thì multi-AZ không còn đủ để xử lý. Với những hệ thống có yêu cầu RTO/RPO nghiêm ngặt như fintech, ecommerce hoặc healthcare, mình nghĩ cần có một phương án Cross-Region DR rõ ràng hơn.
 

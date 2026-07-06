@@ -27,10 +27,10 @@ The VPC `cct-hotels-vpc` uses CIDR `10.0.0.0/16` and spans two Availability Zone
 4. The App Server connects to DocumentDB through internal security group rules.
 5. The App Server sends email through SES and creates VNPay payment URLs.
 
-![Image 05 - VPC resource map](/images/5-Workshop/5.3-Network-backend-database/1.png)
+![Image 05 - VPC resource map](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/1.png)
 <p class="image-caption">Image 05 - VPC resource map</p>
 
-![Image 06 - Public and private route tables](/images/5-Workshop/5.3-Network-backend-database/2.png)
+![Image 06 - Public and private route tables](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/2.png)
 <p class="image-caption">Image 06 - Public and private route tables</p>
 
 

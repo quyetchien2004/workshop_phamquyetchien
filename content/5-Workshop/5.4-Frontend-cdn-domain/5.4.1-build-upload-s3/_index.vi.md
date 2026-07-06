@@ -28,7 +28,7 @@ VITE_SOCKET_URL=https://d2r7fm91wsef8d.cloudfront.net
 
 Không dùng `localhost` trong bản production.
 
-![Hình 20 - File env production của frontend](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/1.png)
+![Hình 20 - File env production của frontend](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/1.png)
 <p class="image-caption">Hình 20 - File env production của frontend</p>
 
 ## 2. Build frontend
@@ -47,7 +47,7 @@ npm run build
 
 Sau khi build thành công, thư mục `frontend/dist` sẽ có `index.html` và thư mục `assets/`.
 
-![Hình 21 - Build frontend thành công](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/2.png)
+![Hình 21 - Build frontend thành công](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/2.png)
 <p class="image-caption">Hình 21 - Build frontend thành công</p>
 
 ## 3. Upload lên S3
@@ -59,7 +59,7 @@ Vào AWS Console > S3:
 3. Chọn toàn bộ file/thư mục **bên trong** `frontend/dist`, không upload nguyên thư mục `dist`.
 4. Bấm **Upload**.
 
-![Hình 22 - Upload frontend dist lên S3](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/3.png)
+![Hình 22 - Upload frontend dist lên S3](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/3.png)
 <p class="image-caption">Hình 22 - Upload frontend dist lên S3</p>
 
 ## 4. Tạo CloudFront invalidation
@@ -72,7 +72,7 @@ Sau mỗi lần upload bản frontend mới, cần xóa cache CloudFront:
 4. Chọn **Create invalidation**.
 5. Nhập object path: `/*`.
 
-![Hình 23 - CloudFront invalidation](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/4.png)
+![Hình 23 - CloudFront invalidation](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.1-build-upload-s3/4.png)
 <p class="image-caption">Hình 23 - CloudFront invalidation</p>
 
 

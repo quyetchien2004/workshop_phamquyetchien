@@ -24,7 +24,7 @@ cct-hotels-backend-env-v2.eba-xxxxx.ap-southeast-1.elasticbeanstalk.com
 
 Because the Elastic Beanstalk environment currently serves HTTP, set the origin protocol to `HTTP only`. If CloudFront uses HTTPS only while the EB origin does not support HTTPS, requests may fail with `504 Gateway Timeout`.
 
-![Image 24 - CloudFront origins](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/1.png)
+![Image 24 - CloudFront origins](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/1.png)
 <p class="image-caption">Image 24 - CloudFront origins</p>
 
 ## 3. Create behaviors
@@ -37,7 +37,7 @@ Because the Elastic Beanstalk environment currently serves HTTP, set the origin 
 
 For `/api/*` and `/socket.io/*`, forward the required query strings, headers, and cookies if authentication or realtime communication needs them.
 
-![Image 25 - CloudFront behaviors](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/2.png)
+![Image 25 - CloudFront behaviors](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/2.png)
 <p class="image-caption">Image 25 - CloudFront behaviors</p>
 
 ## 4. Configure SPA fallback
@@ -49,7 +49,7 @@ Because the frontend is a React SPA, refreshing routes such as `/login`, `/room`
 | 403 | `/index.html` | 200 |
 | 404 | `/index.html` | 200 |
 
-![Image 26 - CloudFront custom error response](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/3.png)
+![Image 26 - CloudFront custom error response](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/3.png)
 <p class="image-caption">Image 26 - CloudFront custom error response</p>
 
 

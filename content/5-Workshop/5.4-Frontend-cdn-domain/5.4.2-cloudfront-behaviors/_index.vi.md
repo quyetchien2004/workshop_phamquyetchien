@@ -24,7 +24,7 @@ cct-hotels-backend-env-v2.eba-xxxxx.ap-southeast-1.elasticbeanstalk.com
 
 Vì backend Elastic Beanstalk đang chạy HTTP, origin protocol nên để `HTTP only`. Nếu để HTTPS only trong khi EB domain chưa có HTTPS, CloudFront có thể trả lỗi `504 Gateway Timeout`.
 
-![Hình 24 - CloudFront origins](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/1.png)
+![Hình 24 - CloudFront origins](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/1.png)
 <p class="image-caption">Hình 24 - CloudFront origins</p>
 
 ## 3. Tạo behaviors
@@ -37,7 +37,7 @@ Vì backend Elastic Beanstalk đang chạy HTTP, origin protocol nên để `HTT
 
 Với `/api/*` và `/socket.io/*`, nên forward query string và các header/cookie cần thiết nếu hệ thống dùng auth hoặc realtime.
 
-![Hình 25 - CloudFront behaviors](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/2.png)
+![Hình 25 - CloudFront behaviors](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/2.png)
 <p class="image-caption">Hình 25 - CloudFront behaviors</p>
 
 ## 4. Cấu hình SPA fallback
@@ -49,7 +49,7 @@ Vì frontend là React SPA, khi refresh các route như `/login`, `/room`, `/my-
 | 403 | `/index.html` | 200 |
 | 404 | `/index.html` | 200 |
 
-![Hình 26 - CloudFront custom error response](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/3.png)
+![Hình 26 - CloudFront custom error response](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.2-cloudfront-behaviors/3.png)
 <p class="image-caption">Hình 26 - CloudFront custom error response</p>
 
 

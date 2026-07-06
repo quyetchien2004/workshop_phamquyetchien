@@ -26,7 +26,7 @@ Kiểm tra các trang chính:
 - Trang đặt phòng.
 - Trang admin nếu có tài khoản admin.
 
-![Hình 30 - Trang chủ production](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/1.png)
+![Hình 30 - Trang chủ production](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/1.png)
 <p class="image-caption">Hình 30 - Trang chủ production</p>
 
 ## 2. Kiểm tra API từ frontend
@@ -39,7 +39,7 @@ https://www.viet70speed.xyz/api/...
 
 Không được gọi `localhost`.
 
-![Hình 31 - Frontend gọi API production](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/2.png)
+![Hình 31 - Frontend gọi API production](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/2.png)
 <p class="image-caption">Hình 31 - Frontend gọi API production</p>
 
 ## 3. Kiểm tra route SPA
@@ -58,7 +58,7 @@ Nếu không bị 403/404, CloudFront SPA fallback đã hoạt động.
 
 Trình duyệt phải hiển thị kết nối HTTPS hợp lệ. Khi bấm vào biểu tượng ổ khóa, certificate phải thuộc domain `viet70speed.xyz` hoặc `www.viet70speed.xyz`.
 
-![Hình 32 - HTTPS certificate trên domain](/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/3.png)
+![Hình 32 - HTTPS certificate trên domain](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/5.4.4-test-production/3.png)
 <p class="image-caption">Hình 32 - HTTPS certificate trên domain</p>
 
 

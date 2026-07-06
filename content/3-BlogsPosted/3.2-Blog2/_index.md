@@ -8,7 +8,7 @@ pre: " <b> 3.2. </b> "
 
 # [AWS Organizations] Deploy AWS Organizations with CloudFormation
 
-![AWS Organizations with CloudFormation](/images/blog/blog2.png)
+![AWS Organizations with CloudFormation](/workshop_phamquyetchien/images/blog/blog2.png)
 
 AWS has officially added CloudFormation support for AWS Organizations, making it possible to manage an organization structure using Infrastructure as Code (IaC). This is an important update for companies that operate multi-account AWS environments.
 

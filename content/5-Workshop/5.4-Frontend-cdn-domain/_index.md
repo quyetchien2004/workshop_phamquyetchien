@@ -25,10 +25,10 @@ Main components:
 - ACM certificate: created in `us-east-1` for CloudFront
 - WAF Web ACL: attached to CloudFront
 
-![Image 18 - S3 frontend bucket](/images/5-Workshop/5.4-Frontend-cdn-domain/1.png)
+![Image 18 - S3 frontend bucket](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/1.png)
 <p class="image-caption">Image 18 - S3 frontend bucket</p>
 
-![Image 19 - CloudFront distribution](/images/5-Workshop/5.4-Frontend-cdn-domain/2.png)
+![Image 19 - CloudFront distribution](/workshop_phamquyetchien/images/5-Workshop/5.4-Frontend-cdn-domain/2.png)
 <p class="image-caption">Image 19 - CloudFront distribution</p>
 
 

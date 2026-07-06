@@ -17,7 +17,7 @@ Môi trường `cct-hotels-backend-env-v2` cần có trạng thái:
 - App port: `8080`
 - Health check path: `/api/health`
 
-![Hình 13 - Elastic Beanstalk Health OK](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/1.png)
+![Hình 13 - Elastic Beanstalk Health OK](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/1.png)
 <p class="image-caption">Hình 13 - Elastic Beanstalk Health OK</p>
 
 ## 2. Kiểm tra API trực tiếp qua Elastic Beanstalk
@@ -37,7 +37,7 @@ Kết quả mong đợi:
 }
 ```
 
-![Hình 14 - Backend health qua Elastic Beanstalk](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/2.png)
+![Hình 14 - Backend health qua Elastic Beanstalk](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/2.png)
 <p class="image-caption">Hình 14 - Backend health qua Elastic Beanstalk</p>
 
 ## 3. Kiểm tra API qua CloudFront
@@ -56,7 +56,7 @@ https://www.viet70speed.xyz/api/health
 
 Nếu trả về JSON healthy, CloudFront đã forward API về backend đúng.
 
-![Hình 15 - Backend health qua CloudFront](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/3.png)
+![Hình 15 - Backend health qua CloudFront](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/3.png)
 <p class="image-caption">Hình 15 - Backend health qua CloudFront</p>
 
 ## 4. Kiểm thử kết nối DocumentDB
@@ -71,10 +71,10 @@ Kiểm thử qua các thao tác có đọc/ghi database:
 
 Nếu các thao tác này lưu và đọc dữ liệu được, backend đã kết nối DocumentDB thành công.
 
-![Hình 16 - Đăng ký hoặc đăng nhập thành công](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/4.png)
+![Hình 16 - Đăng ký hoặc đăng nhập thành công](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/4.png)
 <p class="image-caption">Hình 16 - Đăng ký hoặc đăng nhập thành công</p>
 
-![Hình 17 - Booking được lưu trong hệ thống](/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/5.png)
+![Hình 17 - Booking được lưu trong hệ thống](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.2-test-backend-database/5.png)
 <p class="image-caption">Hình 17 - Booking được lưu trong hệ thống</p>
 
 ## 5. Lỗi thường gặp

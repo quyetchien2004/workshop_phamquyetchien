@@ -103,4 +103,4 @@ In this event, I participated as an attendee. I followed the presentations, revi
 
 ## Participation Evidence
 
-![FCAJ Community Day - Event 1](/images/event/even1.jpg)
+![FCAJ Community Day - Event 1](/workshop_phamquyetchien/images/event/even1.jpg)

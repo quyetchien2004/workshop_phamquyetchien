@@ -25,7 +25,7 @@ Test the main features:
 - Admin can view/approve bookings.
 - Socket.IO or realtime notifications work if used by the admin page.
 
-![Image 39 - End-to-end test result](/images/5-Workshop/5.6-Final-test-cleanup/1.png)
+![Image 39 - End-to-end test result](/workshop_phamquyetchien/images/5-Workshop/5.6-Final-test-cleanup/1.png)
 <p class="image-caption">Image 39 - End-to-end test result</p>
 
 ## 2. Check logs when issues happen
@@ -38,7 +38,7 @@ Useful places to inspect:
 - DocumentDB > Cluster events or CloudWatch metrics.
 - Browser DevTools > Network: frontend API errors.
 
-![Image 40 - Elastic Beanstalk logs or health](/images/5-Workshop/5.6-Final-test-cleanup/2.png)
+![Image 40 - Elastic Beanstalk logs or health](/workshop_phamquyetchien/images/5-Workshop/5.6-Final-test-cleanup/2.png)
 <p class="image-caption">Image 40 - Elastic Beanstalk logs or health</p>
 
 ## 3. Clean up resources to reduce cost
@@ -58,7 +58,7 @@ After demo or when the system is no longer needed, clean up expensive resources:
 DocumentDB, NAT Gateway, ALB, and EC2 are the most likely resources to generate noticeable cost. For a demo/report project, stop or delete them when not in use and check the Billing Dashboard.
 {{% /notice %}}
 
-![Image 41 - AWS Billing or cleanup check](/images/5-Workshop/5.6-Final-test-cleanup/3.png)
+![Image 41 - AWS Billing or cleanup check](/workshop_phamquyetchien/images/5-Workshop/5.6-Final-test-cleanup/3.png)
 <p class="image-caption">Image 41 - AWS Billing or cleanup check</p>
 
 ## 4. Workshop conclusion

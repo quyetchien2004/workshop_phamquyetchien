@@ -44,13 +44,13 @@ Cách này giúp EC2 backend trong private subnet không bị public trực ti�
 
 Không mở DocumentDB cho `0.0.0.0/0`.
 
-![Hình 07 - Security Group của ALB](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/1.png)
+![Hình 07 - Security Group của ALB](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/1.png)
 <p class="image-caption">Hình 07 - Security Group của ALB</p>
 
-![Hình 08 - Security Group của App Server](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/2.png)
+![Hình 08 - Security Group của App Server](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/2.png)
 <p class="image-caption">Hình 08 - Security Group của App Server</p>
 
-![Hình 09 - Security Group của DocumentDB](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/3.png)
+![Hình 09 - Security Group của DocumentDB](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/3.png)
 <p class="image-caption">Hình 09 - Security Group của DocumentDB</p>
 
 ## 4. Tạo Amazon DocumentDB
@@ -74,7 +74,7 @@ mongodb://cctadmin:<password>@cct-hotels-docdb.cluster-xxxxx.ap-southeast-1.docd
 
 Khi deploy, file `global-bundle.pem` phải nằm trong source bundle để backend kết nối TLS tới DocumentDB.
 
-![Hình 10 - DocumentDB cluster Available](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/4.png)
+![Hình 10 - DocumentDB cluster Available](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/4.png)
 <p class="image-caption">Hình 10 - DocumentDB cluster Available</p>
 
 ## 5. Deploy backend bằng Elastic Beanstalk
@@ -97,10 +97,10 @@ Source bundle cần có `Procfile`:
 web: npm run start --workspace backend
 ```
 
-![Hình 11 - Elastic Beanstalk configuration](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/5.png)
+![Hình 11 - Elastic Beanstalk configuration](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/5.png)
 <p class="image-caption">Hình 11 - Elastic Beanstalk configuration</p>
 
-![Hình 12 - Elastic Beanstalk environment variables](/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/6.png)
+![Hình 12 - Elastic Beanstalk environment variables](/workshop_phamquyetchien/images/5-Workshop/5.3-Network-backend-database/5.3.1-create-infrastructure/6.png)
 <p class="image-caption">Hình 12 - Elastic Beanstalk environment variables</p>
 
 
