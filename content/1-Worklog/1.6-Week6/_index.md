@@ -1,52 +1,34 @@
 ﻿---
 title: "Week 6 Worklog"
-date: 2026-04-17
+date: 2026-05-22
 weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
+
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn about basic database services on AWS.
+* Understand the basic difference between Amazon RDS and DynamoDB.
+* Connect cloud databases with database knowledge learned at university.
+* Follow a small DynamoDB lab to understand how to create and work with a table.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| Friday | - Learned the overview of databases on AWS <br> - Learned about self-managed database and managed database | 22/05/2026 | 22/05/2026 | <https://docs.aws.amazon.com/> |
+| Monday | - Learned about Amazon RDS <br> - Learned common engines such as MySQL and PostgreSQL | 25/05/2026 | 25/05/2026 | <https://docs.aws.amazon.com/rds/> |
+| Tuesday | - Learned about endpoint, username, password, and port when connecting to a database <br> - Learned possible connection issues | 26/05/2026 | 26/05/2026 | <https://docs.aws.amazon.com/rds/> |
+| Wednesday | - Followed the DynamoDB getting started lab <br> - Practiced creating a table, adding data, and querying data at a basic level | 27/05/2026 | 27/05/2026 | <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStartedDynamoDB.html> |
+| Thursday | - Completed week 6 learning content <br> - Identified when RDS may be used and when DynamoDB should be explored | 28/05/2026 | 28/05/2026 | |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* I understood that RDS is a database service where AWS manages many operation tasks.
+* I learned that RDS is suitable for relational databases such as MySQL or PostgreSQL.
+* I understood that DynamoDB is a NoSQL database and uses a different way of thinking from relational databases.
+* After the DynamoDB lab, I could better imagine how to create a table, add items, and read data.
+* I learned that cloud database work needs attention to endpoint, port, login account, and security group.
+* I realized that using a database on AWS is not only about creating tables, but also about connection, security, and cost.
+* This week helped me connect university database knowledge with cloud database deployment.

@@ -1,54 +1,34 @@
 ﻿---
 title: "Worklog Tuần 5"
-date: 2026-04-17
+date: 2026-05-15
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
+
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu Amazon EC2 và khái niệm máy chủ ảo trên cloud.
+* Biết các thành phần cơ bản khi tạo EC2 instance.
+* Hiểu sơ qua security group và key pair.
+* Làm theo một bài lab cơ bản về tạo và kết nối EC2 instance.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 6 | - Tìm hiểu EC2 là gì <br> - Tìm hiểu khái niệm instance, AMI và instance type | 15/05/2026 | 15/05/2026 | <https://docs.aws.amazon.com/ec2/> |
+| 2 | - Làm lab tạo EC2 instance đầu tiên <br> - Thực hiện các bước chọn AMI, instance type và key pair | 18/05/2026 | 18/05/2026 | <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html> |
+| 3 | - Tìm hiểu security group <br> - Tìm hiểu vì sao không nên mở port tùy tiện | 19/05/2026 | 19/05/2026 | <https://docs.aws.amazon.com/ec2/> |
+| 4 | - Tìm hiểu storage gắn với EC2 như EBS ở mức cơ bản <br> - Tìm hiểu lifecycle của instance: start, stop, terminate | 20/05/2026 | 20/05/2026 | <https://docs.aws.amazon.com/ec2/> |
+| 5 | - Hoàn thiện phần tìm hiểu EC2 <br> - Xác định trường hợp có thể dùng EC2 trong một project phần mềm | 21/05/2026 | 21/05/2026 | |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu EC2 là dịch vụ tạo máy chủ ảo trên AWS.
+* Biết khi tạo EC2 cần quan tâm AMI, instance type, key pair, security group và storage.
+* Hiểu security group giống như lớp kiểm soát traffic vào ra cho instance.
+* Biết cần cẩn thận khi mở port, đặc biệt là các port đăng nhập như SSH.
+* Hiểu EC2 có thể dùng để chạy server, deploy backend hoặc thử nghiệm môi trường ứng dụng.
+* Sau bài lab, em biết quy trình cơ bản gồm launch instance, connect vào instance và cleanup sau khi thực hành.
+* Sau tuần này em thấy EC2 gần với kiến thức server hơn, nên dễ liên hệ với ngành công nghệ phần mềm.

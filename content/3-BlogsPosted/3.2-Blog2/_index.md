@@ -1,27 +1,45 @@
-﻿---
-title: "Blog 2"
+---
+title: "Deploy AWS Organizations with CloudFormation"
 date: 2026-04-17
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+# [AWS Organizations] Deploy AWS Organizations with CloudFormation
 
-Key points to know:
+![AWS Organizations with CloudFormation](/images/blog/blog2.png)
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+AWS has officially added CloudFormation support for AWS Organizations, making it possible to manage an organization structure using Infrastructure as Code (IaC). This is an important update for companies that operate multi-account AWS environments.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+Previously, creating Organizational Units (OUs), AWS accounts, and governance policies in AWS Organizations was often done manually through the AWS Console or AWS CLI. As the number of accounts grows, this process becomes more complex, time-consuming, and harder to keep consistent across environments.
 
-...Image...
+With CloudFormation, users can define and deploy AWS Organizations resources through templates. This allows teams to create, update, or delete organization structures in a more automated and controlled way.
 
-...Link...
+## Supported resource types
 
-...Guide...
+CloudFormation currently supports three main resource types:
+
+* `AWS::Organizations::Account`: creates a new AWS account and automatically adds it to the Organization.
+* `AWS::Organizations::OrganizationalUnit`: creates an OU under the Root or under a parent OU.
+* `AWS::Organizations::Policy`: creates and manages policies such as Service Control Policies (SCPs), Tag Policies, Backup Policies, and AI Services Opt-Out Policies.
+
+## Deployment example
+
+In the example shared by AWS, a template can automatically create OUs such as Infrastructure, Production, and Security. The same template can also create AccountA and deploy SCPs to prevent accounts from leaving the Organization or to prevent CloudTrail from being disabled.
+
+Tag Policies can also be applied to standardize tagging across the AWS environment. This helps teams manage resources more easily, especially when the number of accounts and workloads increases.
+
+## Benefits
+
+The biggest benefit of this feature is that organizations can manage AWS Organizations as code. The organization structure can be stored in Git, reviewed before changes, and integrated into automation workflows.
+
+As a result, teams can scale or modify the existing structure more quickly, deploy new environments more consistently, and apply governance policies across multiple AWS accounts.
+
+## Conclusion
+
+CloudFormation support for AWS Organizations is an important step toward standardizing AWS governance at scale. It reduces manual work, improves consistency, and supports infrastructure management through Infrastructure as Code.
+
+For multi-account environments, this is a useful direction because it makes AWS account governance clearer and easier to control.
+
+**Reference:** [Deploy AWS Organizations resources by using CloudFormation](https://aws.amazon.com/vi/blogs/security/deploy-aws-organizations-resources-by-using-cloudformation/)

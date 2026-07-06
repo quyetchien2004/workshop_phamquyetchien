@@ -5,107 +5,113 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+In this section, we summarize the proposed AWS deployment plan for the **CCT Hotels Booking** project.
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+# CCT Hotels Booking on AWS
+## A Low-Cost Cloud Architecture for Hotel Booking, Payment, and Email Notification
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+### 1. Project Overview
+CCT Hotels Booking is a web-based hotel booking system that supports customers and administrators in searching rooms, creating bookings, managing reservations, processing VNPay sandbox payments, and sending email notifications such as OTP codes, password reset emails, and booking confirmations.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+The project is deployed on AWS with a cost-conscious architecture suitable for an internship report and demo environment. The frontend is hosted as a static website on Amazon S3 and delivered through Amazon CloudFront. The backend runs on Elastic Beanstalk with Node.js/Express and Socket.IO. Data is stored in Amazon DocumentDB, and transactional emails are sent through Amazon SES. VNPay is integrated as an external third-party payment gateway.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+### 2. Objectives
+- Deploy the CCT Hotels Booking web application to AWS in a clear and demonstrable architecture.
+- Use AWS services that are practical for a student project while still reflecting real-world cloud deployment patterns.
+- Separate frontend, backend, database, email, and payment responsibilities clearly.
+- Improve performance and security by using CloudFront, HTTPS, WAF, private subnets, and security groups.
+- Provide a stable demo flow: browse website, register/login, search rooms, create bookings, receive email notifications, and test VNPay sandbox payment.
+- Prepare architecture documentation that can be reviewed easily by internship supervisors.
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+### 3. Problems to Solve
+The original local deployment has several limitations:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+- The application only runs on a local machine and cannot be accessed reliably by external users.
+- Static frontend assets are not optimized for global delivery.
+- Backend, database, and email configuration are tightly coupled in the local environment.
+- Payment callback URLs cannot be tested properly without a public endpoint.
+- Email sending through personal SMTP is not suitable for a cloud report or production-like architecture.
+- Database access must be protected from the public Internet.
+- The system needs clearer monitoring, security, and cost-control practices for AWS usage.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+The proposed AWS architecture solves these issues by deploying each layer to the appropriate managed service and exposing only the required public entry points.
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+### 4. Solution Architecture
+The solution uses a layered AWS architecture:
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+![CCT Hotels Booking AWS Architecture](/images/2-Proposal/anh%201.jpg)
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+#### Main AWS Services
+- **Amazon S3**: Hosts the React/Vite production build and stores static frontend assets.
+- **Amazon CloudFront**: Distributes the frontend through CDN, supports HTTPS, caching, and routes API traffic to the backend.
+- **AWS WAF**: Protects the web entry point from common web attacks at the edge.
+- **AWS Elastic Beanstalk**: Deploys and manages the Node.js/Express backend on EC2 with an Application Load Balancer.
+- **Amazon DocumentDB**: Stores users, rooms, bookings, payments, OTP data, and application data using a MongoDB-compatible database.
+- **Amazon SES**: Sends OTP codes, password reset messages, and booking confirmation emails.
+- **Amazon Route 53 / Custom Domain**: Points the custom domain to CloudFront and supports DNS configuration.
+- **AWS Certificate Manager (ACM)**: Provides HTTPS certificates for CloudFront.
+- **Amazon VPC**: Separates public and private resources using subnets, route tables, security groups, NAT Gateway, and Internet Gateway.
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+#### Architecture Flow
+1. Users access the website through the custom domain or CloudFront domain over HTTPS.
+2. CloudFront serves static frontend files from the private S3 bucket.
+3. AWS WAF filters common malicious requests before they reach the application.
+4. API requests such as `/api/*` and Socket.IO requests such as `/socket.io/*` are routed from CloudFront to Elastic Beanstalk.
+5. Elastic Beanstalk forwards traffic through the Application Load Balancer to the Node.js backend.
+6. The backend connects privately to Amazon DocumentDB for application data.
+7. Amazon DocumentDB stores booking, account, payment, room, and OTP-related data.
+8. The backend sends email through Amazon SES SMTP.
+9. For payment, the backend creates a VNPay payment URL and redirects the customer to the VNPay sandbox gateway.
+10. VNPay returns the payment result to the configured return URL and IPN endpoint through CloudFront and the backend API.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+#### Network and Security Design
+- Public subnets contain public-facing resources such as the load balancer and NAT Gateway.
+- Private subnets contain application instances and Amazon DocumentDB.
+- DocumentDB is not exposed to the Internet and only accepts traffic from the application security group.
+- Application instances use NAT Gateway for outbound Internet access when needed.
+- CloudFront uses HTTPS and ACM certificates.
+- WAF is attached at the CloudFront layer.
+- Environment variables are configured in Elastic Beanstalk and secrets are not committed to the repository.
+
+### 5. Timeline
+| Phase | Duration | Main Tasks | Deliverables |
+|---|---:|---|---|
+| Planning | Week 9 | Hold group meeting, choose CCT Hotels Booking topic, split tasks, draw AWS architecture on draw.io | Project topic, AWS architecture diagram, team responsibility split |
+| Network | Week 10 | Create VPC, public/private subnets, route tables, Internet Gateway, NAT Gateway, and main security groups | Network environment ready for frontend, backend, and database |
+| Backend / Database | Week 10 - Week 11 | Deploy Node.js/Express backend, configure ALB, target group, health check, and connect Amazon DocumentDB | Backend URL, health check API, working database connection |
+| Frontend / CDN | Week 10 - Week 11 | Build frontend, upload to S3, create CloudFront distribution, attach WAF/HTTPS/domain, and configure API behavior | Public website URL, CloudFront routing, HTTPS access |
+| Integration / Test | Week 11 | Test register/login, room search, booking, email, VNPay sandbox, and frontend API flow | Project main flow works, screenshots and report evidence prepared |
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+This project uses a low-cost AWS setup for demo and internship reporting. Costs depend on running time, region, traffic, and whether resources are stopped after testing.
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+| Component | Estimated Cost Notes |
+|---|---|
+| Amazon S3 | Very low cost for static frontend storage |
+| Amazon CloudFront | Low cost for demo traffic; may fit within free usage depending on account eligibility |
+| AWS WAF | Additional monthly and request-based cost if enabled |
+| Elastic Beanstalk / EC2 | Cost depends on instance type and uptime |
+| Application Load Balancer | Adds hourly and traffic-based cost |
+| Amazon DocumentDB | Main cost driver, especially when the instance runs continuously |
+| NAT Gateway | Can become expensive if left running for a long time |
+| Amazon SES | Very low cost for small email volume |
+| Route 53 / Domain | Domain and hosted zone costs if used |
 
-Total: $0.7/month, $8.40/12 months
+For a short demo, the cost can be controlled by stopping or deleting nonessential resources after use. If all resources are left running for a full month, the expected cost may be significantly higher, mainly because of DocumentDB, NAT Gateway, EC2, and Load Balancer usage. AWS Budgets should be configured to alert the team when spending approaches the planned limit.
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+### 7. Risks
+| Risk | Impact | Mitigation |
+|---|---|---|
+| Unexpected AWS cost | High | Use AWS Budgets, stop DocumentDB/Elastic Beanstalk/NAT Gateway after demo, monitor Billing Dashboard |
+| SES sandbox limitation | Medium | Verify sender and recipient emails or request production access before wider testing |
+| VNPay sandbox approval issue | Medium | Use correct sandbox credentials, return URL, IPN URL, and contact VNPay support if the site is not approved |
+| CORS errors after deployment | Medium | Configure backend `CLIENT_URL` and `SERVER_URL` with the CloudFront/custom domain |
+| CloudFront cache serving old files | Low | Create invalidation for `/*` after each frontend upload |
+| DocumentDB connection failure | High | Check VPC, private subnet group, security group rule, TLS CA file, and MongoDB URI |
+| Security group misconfiguration | High | Allow only required inbound ports and restrict database access to the app security group |
+| Secrets exposed in repository or screenshots | High | Store secrets in environment variables, rotate exposed credentials, avoid committing `.env` |
+| Single-instance demo limitation | Medium | Accept for demo cost optimization or scale to multiple instances for high availability |
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
-
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
-
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
-
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+### 8. Expected Outcome
+After implementation, the system will provide a complete cloud-based hotel booking demo with public frontend access, backend API deployment, protected database access, transactional email, and VNPay sandbox payment integration. The architecture is suitable for an internship project because it demonstrates practical AWS services, deployment workflow, security design, and cost-control considerations.

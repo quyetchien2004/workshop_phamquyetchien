@@ -1,27 +1,43 @@
-﻿---
-title: "Blog 3"
+---
+title: "Đơn giản hóa Disaster Recovery với AWS Backup, AWS DRS và Arpio"
 date: 2026-04-17
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+# [AWS Resilience] Đơn giản hóa Disaster Recovery với AWS Backup, AWS DRS và Arpio
 
-Các điểm chính cần nắm:
+![Disaster Recovery với AWS Backup, AWS DRS và Arpio](/images/blog/blog3.png)
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+Xây dựng một giải pháp Disaster Recovery (DR) toàn diện trên AWS không chỉ đơn giản là sao lưu dữ liệu. Để đảm bảo tính liên tục của dịch vụ, doanh nghiệp cần có khả năng phục hồi toàn bộ workload khi xảy ra sự cố, bao gồm dữ liệu, tài nguyên tính toán, hạ tầng mạng, cấu hình và các thành phần phụ thuộc khác.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+AWS cung cấp nhiều dịch vụ mạnh mẽ để hiện thực hóa mục tiêu này. Tuy nhiên, việc kết hợp và vận hành các dịch vụ riêng lẻ đòi hỏi nhiều công sức thiết kế và tự động hóa. Đây cũng là lý do AWS Backup, AWS Elastic Disaster Recovery (AWS DRS) và Arpio có thể được sử dụng cùng nhau để xây dựng một giải pháp DR hoàn chỉnh hơn.
 
-...Hình ảnh...
+## AWS Backup - Bảo vệ dữ liệu tập trung
 
-...Link...
+Dữ liệu luôn là nền tảng của mọi workload. AWS Backup giúp quản lý tập trung việc sao lưu trên nhiều dịch vụ AWS như Amazon EBS, Amazon RDS, Amazon DynamoDB hay Amazon EFS.
 
-...Hướng dẫn...
+Dịch vụ này hỗ trợ thiết lập chính sách backup, lịch sao lưu tự động, cũng như sao lưu chéo Region và chéo tài khoản AWS. Việc lưu trữ các bản sao ở một Region hoặc một tài khoản độc lập không chỉ nâng cao khả năng phục hồi mà còn tăng cường bảo mật trước các rủi ro như malware hoặc ransomware.
+
+## AWS DRS - Phục hồi máy chủ với RPO và RTO thấp
+
+Bên cạnh dữ liệu, các tài nguyên tính toán cũng cần được bảo vệ. AWS Elastic Disaster Recovery (AWS DRS) cung cấp khả năng sao chép liên tục ở mức block, giúp đạt được RPO chỉ trong vài giây và thời gian phục hồi RTO khoảng 5 đến 20 phút.
+
+Ngoài khả năng khôi phục Amazon EC2, AWS DRS còn hỗ trợ cấu hình môi trường mạng tại site phục hồi. Nhờ đó, hệ thống có thể nhanh chóng quay trở lại trạng thái hoạt động bình thường khi có sự cố.
+
+## Arpio - Tự động hóa quá trình khôi phục toàn bộ workload
+
+Việc phục hồi dữ liệu và máy chủ vẫn chưa đủ đối với các ứng dụng hiện đại. Các thành phần như Amazon ECS, Amazon EKS, AWS Lambda, Auto Scaling, IAM, networking và hạ tầng cũng cần được tái tạo với đúng cấu hình.
+
+Arpio, đối tác AWS Resilience Competency, được xây dựng dựa trên AWS Backup và AWS DRS nhằm tự động khám phá, sao lưu và khôi phục toàn bộ workload sang môi trường cross-Region hoặc cross-account.
+
+Giải pháp này còn hỗ trợ ánh xạ lại endpoint, quản lý thông tin cấu hình và đảm bảo ứng dụng có thể kết nối với các tài nguyên đã được phục hồi một cách liền mạch.
+
+## Kết
+
+Với khả năng sao lưu hơn 140 loại tài nguyên AWS và khôi phục thành một môi trường hoạt động hoàn chỉnh, sự kết hợp giữa AWS Backup, AWS DRS và Arpio giúp doanh nghiệp đơn giản hóa quá trình triển khai Disaster Recovery.
+
+Theo mình, điểm đáng chú ý là giải pháp này không chỉ tập trung vào backup dữ liệu, mà còn hướng đến phục hồi toàn bộ workload. Nhờ đó, doanh nghiệp có thể giảm khối lượng vận hành thủ công, rút ngắn thời gian phục hồi và nâng cao khả năng duy trì hoạt động liên tục của hệ thống trên AWS.
+
+**Nguồn tham khảo:** [Streamlining access to powerful disaster recovery capabilities of AWS](https://aws.amazon.com/vi/blogs/architecture/streamlining-access-to-powerful-disaster-recovery-capabilities-of-aws/)

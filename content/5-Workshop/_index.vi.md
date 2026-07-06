@@ -1,28 +1,31 @@
 ﻿---
-title: "Workshop"
-date: 2026-04-17
-weight: 5
-chapter: false
-pre: " <b> 5. </b> "
+title : "Workshop"
+date: 2026-07-06
+weight : 5
+chapter : true
+pre : " <b> 5. </b> "
 ---
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+# Workshop triển khai CCT Hotels Booking trên AWS
 
-#### Tổng quan
+Phần workshop này ghi lại quá trình nhóm triển khai hệ thống **CCT Hotels Booking** lên AWS. Nội dung được viết theo đúng các bước đã làm trong đồ án: đưa frontend React/Vite lên S3 và CloudFront, triển khai backend Node.js/Express bằng Elastic Beanstalk, kết nối Amazon DocumentDB, cấu hình Amazon SES để gửi OTP/email và tích hợp VNPay sandbox.
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+Mục tiêu của workshop là chứng minh hệ thống có thể chạy được trên môi trường cloud, có domain/HTTPS, có backend API, có database riêng, có email giao dịch và có luồng thanh toán thử nghiệm.
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+Các nhóm dịch vụ chính:
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+1. **Frontend/CDN**: Amazon S3, Amazon CloudFront, AWS WAF, ACM, Namecheap DNS.
+2. **Network/Backend**: VPC, public/private subnet, Internet Gateway, NAT Gateway, Security Group, ALB, Elastic Beanstalk.
+3. **Database/Email/Payment**: Amazon DocumentDB, Amazon SES SMTP, VNPay sandbox.
+4. **Kiểm thử và vận hành**: health check, CORS, CloudFront behavior, invalidation, cleanup tài nguyên.
 
-#### Nội dung
+## Content
 
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+1. [Workshop overview](5.1-workshop-overview/)
+2. [Prerequisite](5.2-prerequiste/)
+3. [Network, backend and database](5.3-network-backend-database/)
+4. [Frontend, CDN and domain](5.4-frontend-cdn-domain/)
+5. [SES and VNPay](5.5-ses-vnpay/)
+6. [Final test and cleanup](5.6-final-test-cleanup/)
+
+

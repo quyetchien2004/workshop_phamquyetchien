@@ -1,27 +1,77 @@
-﻿---
-title: "Blog 1"
-date: 2026-04-17
+---
+title: "Kubernetes bị sập cả Region thì sao?"
+date: 2026-06-09
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+# Kubernetes bị sập cả Region thì sao? Đây là cách AWS Backup giúp bạn phục hồi
 
-Các điểm chính cần nắm:
+![Kubernetes Cross-Region DR với AWS Backup](/images/blog/blog1.png)
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+Nhiều team chạy EKS đã có multi-AZ, nhưng nếu cả một AWS Region gặp sự cố thì multi-AZ không còn đủ để xử lý. Với những hệ thống có yêu cầu RTO/RPO nghiêm ngặt như fintech, ecommerce hoặc healthcare, mình nghĩ cần có một phương án Cross-Region DR rõ ràng hơn.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+Bài này mình tóm tắt một cách tiếp cận khá gọn từ AWS: dùng AWS Backup để backup EKS xuyên Region, không cần tự dựng pipeline phức tạp.
 
-...Hình ảnh...
+## Vấn đề với stateful workloads trên EKS
 
-...Link...
+Backup stateful app như MySQL, Redis, Kafka trên Kubernetes không đơn giản như snapshot một EC2. Mình cần đảm bảo cả Kubernetes manifests và persistent volume data đều nhất quán tại cùng một thời điểm, sau đó replicate toàn bộ sang Region khác.
 
-...Hướng dẫn...
+Trước đây nhiều team thường dùng Velero để xử lý bài toán này. Hiện tại AWS Backup cũng hỗ trợ native cho EKS. Điểm đáng chú ý là nó tạo ra một composite recovery point duy nhất gồm cả Kubernetes resources và EBS snapshots trong một lần backup. Sau đó việc copy sang Region khác có thể thực hiện bằng AWS CLI.
+
+## Luồng hoạt động
+
+1. Deploy EKS ở Region nguồn `us-east-1` với app stateful gồm MySQL 20GB và Redis 10GB chạy trên EBS.
+2. Tạo Backup Vault ở cả hai Region, sau đó chạy backup job để tạo composite recovery point.
+3. Copy recovery point sang DR Region `us-west-2`.
+4. Pre-provision DR cluster sẵn. Đây là điểm quan trọng để giảm RTO vì cluster đã sẵn sàng khi cần restore.
+5. Restore toàn bộ app và persistent data vào DR cluster, sau đó kiểm tra dữ liệu MySQL và Redis có khớp với source hay không.
+
+Sau khi restore thành công, hệ thống có 6 pods running, 2 PVCs bound và Load Balancer URL active. Như vậy app có thể chạy lại đầy đủ với toàn bộ data cần thiết.
+
+## Ưu điểm
+
+* Native AWS, không cần cài thêm agent hay sidecar vào cluster.
+* Có Vault Lock và encryption at-rest, phù hợp với các yêu cầu compliance như HIPAA hoặc PCI-DSS.
+* Pre-provisioned DR cluster giúp RTO thấp hơn đáng kể.
+* Quản lý tập trung scheduling, retention và monitoring trong một service.
+
+## Nhược điểm
+
+* Phải trả tiền duy trì DR cluster liên tục dù không dùng thường xuyên.
+* Phần restore metadata, ví dụ EBS snapshot ARN mapping, khá dễ lỗi nếu chưa automation.
+* Không tự động failover, vẫn cần can thiệp thủ công khi có sự cố.
+* Cross-account restore cần cấu hình IAM thêm.
+
+## AWS Backup hay Velero?
+
+Cả hai đều giải quyết được bài toán backup và restore EKS, nhưng hướng tiếp cận khác nhau.
+
+AWS Backup là managed service, setup ít bước hơn, có cross-region copy native, Vault Lock và audit log phù hợp cho compliance. Điểm trừ là chỉ phù hợp khi chạy trên AWS và sẽ tốn phí theo lượng backup.
+
+Velero thì linh hoạt hơn, có thể chạy multi-cloud, filter theo namespace hoặc exclude resource type. Đổi lại team phải tự lo storage backend, tự cấu hình replication và tự vận hành.
+
+Nên dùng AWS Backup khi:
+
+* Toàn bộ stack nằm trên AWS.
+* Team cần compliance audit trail.
+* Muốn giảm operational overhead.
+* Đã quen với AWS Console hoặc AWS CLI.
+
+Nên dùng Velero khi:
+
+* Hệ thống chạy multi-cloud hoặc hybrid.
+* Cần flexibility cao như filter namespace, exclude resource type.
+* Muốn kiểm soát hoàn toàn backup storage.
+* Budget được ưu tiên hơn sự tiện lợi.
+
+## Kết
+
+AWS Backup cho EKS là một bước tiến thực tế trong việc làm DR dễ tiếp cận hơn cho các team vận hành Kubernetes trên AWS. Composite recovery point, cross-region copy và vault security đều nằm trong một managed service, nên team không cần tự dựng pipeline riêng từ đầu.
+
+Tuy vậy, đây vẫn là warm standby DR chứ không phải một nút bấm thần kỳ. RTO thực tế phụ thuộc vào việc DR cluster đã được chuẩn bị sẵn chưa, metadata có đúng không và team có drill thường xuyên không.
+
+DR tốt là DR được test thường xuyên, không phải DR chỉ đẹp trên paper.
+
+**Nguồn tham khảo:** [Cross-Region disaster recovery for Amazon EKS using AWS Backup](https://aws.amazon.com/vi/blogs/containers/cross-region-disaster-recovery-for-amazon-eks-using-aws-backup/)

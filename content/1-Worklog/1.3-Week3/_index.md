@@ -1,52 +1,33 @@
 ﻿---
 title: "Week 3 Worklog"
-date: 2026-04-17
+date: 2026-05-01
 weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
+
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn about AWS accounts and the AWS Management Console.
+* Know the basic items to check after signing in to AWS.
+* Get familiar with IAM at a basic level because it is important when using AWS.
+* Continue learning new terms in my own way.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| Friday | - Connected AWS Free Tier from week 2 with AWS Console <br> - Prepared the topics to learn before using AWS Console | 01/05/2026 | 01/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Learned about AWS Management Console <br> - Learned about region, service search, billing, and account menu | 04/05/2026 | 04/05/2026 | <https://docs.aws.amazon.com/> |
+| Tuesday | - Learned what IAM is <br> - Learned the basic difference between user, group, role, and policy | 05/05/2026 | 05/05/2026 | <https://docs.aws.amazon.com/iam/> |
+| Wednesday | - Learned why root account should not be used for daily tasks <br> - Learned basic security rules for learning AWS | 06/05/2026 | 06/05/2026 | <https://docs.aws.amazon.com/iam/> |
+| Thursday | - Completed the console and IAM section <br> - Identified confusing terms to ask or check later | 07/05/2026 | 07/05/2026 | |
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* I knew how to navigate the AWS Management Console at a basic level.
+* I understood that region is the place where AWS services are deployed and should be checked before practice.
+* I learned that IAM is used to manage access permissions in AWS.
+* I could roughly explain user, group, role, and policy.
+* I understood that account security is important and the root account should be used carefully.
+* After this week, I felt more familiar with AWS documents, but there were still many new terms to learn.

@@ -1,52 +1,36 @@
 ﻿---
 title: "Week 10 Worklog"
-date: 2026-04-17
+date: 2026-06-19
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
+
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Deploy the main AWS services for the **CCT Hotels Booking** project based on the architecture diagram from week 9.
+* Split the group tasks clearly:
+  * Quyen: Frontend S3, CloudFront, AWS WAF.
+  * Me: Network and preparation for Backend + ALB.
+  * Tien Huy: DocumentDB, SES, and VNPay.
+* Complete the network part, including VPC, subnets, route tables, internet gateway, and NAT Gateway.
+* Finish the network environment so backend, database, and frontend parts can connect correctly.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| Friday | - Had a group meeting to finalize deployment tasks for CCT Hotels Booking <br> - Confirmed that I was responsible for Network and Backend + ALB | 19/06/2026 | 19/06/2026 | |
+| Monday | - Created the VPC structure based on the architecture diagram <br> - Prepared public subnets and private subnets for 2 Availability Zones | 22/06/2026 | 22/06/2026 | |
+| Tuesday | - Configured internet gateway and route table for public subnets <br> - Checked internet routing for public resources | 23/06/2026 | 23/06/2026 | |
+| Wednesday | - Prepared NAT Gateway for private subnets <br> - Checked how backend instances in private subnets can access the internet when needed | 24/06/2026 | 24/06/2026 | |
+| Thursday | - Reviewed the network diagram with the group <br> - Completed the network part before moving to backend and ALB deployment | 25/06/2026 | 25/06/2026 | |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* The group finalized the deployment tasks clearly.
+* I understood that my main parts were Network and Backend + ALB.
+* I completed the main network preparation for CCT Hotels Booking.
+* I identified public subnets for ALB/NAT Gateway and private subnets for backend servers and DocumentDB.
+* I understood better the roles of VPC, subnet, route table, internet gateway, and NAT Gateway in a real architecture.
+* After this week, the network part of the project was completed and ready for backend, ALB, and system testing.

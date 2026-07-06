@@ -1,54 +1,33 @@
-﻿---
+---
 title: "Worklog Tuần 9"
-date: 2026-04-17
+date: 2026-06-12
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
+
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Họp nhóm để thống nhất chủ đề kiến trúc cho project.
+* Xác định các dịch vụ AWS chính cần đưa vào sơ đồ.
+* Sử dụng draw.io để vẽ sơ đồ kiến trúc ban đầu.
+* Chỉnh sửa lại sơ đồ để bố cục rõ ràng hơn và dễ đưa vào báo cáo.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 6 | - Họp nhóm để trao đổi hướng làm project <br> - Thống nhất chủ đề hệ thống web có frontend, backend, database và các dịch vụ bảo mật cơ bản | 12/06/2026 | 12/06/2026 | |
+| 2 | - Xác định các thành phần cần có trong kiến trúc <br> - Chọn các dịch vụ AWS phù hợp như Route 53, CloudFront, S3, ALB, Elastic Beanstalk/EC2, DocumentDB và SES | 15/06/2026 | 15/06/2026 | <https://aws.amazon.com/architecture/> |
+| 3 | - Bắt đầu vẽ sơ đồ trên draw.io <br> - Chia sơ đồ theo các khu vực như Region, VPC, public subnet, private subnet và Availability Zone | 16/06/2026 | 16/06/2026 | <https://www.drawio.com/> |
+| 4 | - Bổ sung luồng truy cập của người dùng vào hệ thống <br> - Thêm các thành phần CloudFront, AWS WAF, S3 static website hosting và Application Load Balancer | 17/06/2026 | 17/06/2026 | |
+| 5 | - Chỉnh lại bố cục sơ đồ kiến trúc | 18/06/2026 | 18/06/2026 | |
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nhóm đã thống nhất được chủ đề kiến trúc cho project.
+* Xác định được các dịch vụ AWS chính sẽ xuất hiện trong sơ đồ.
+* Tạo được sơ đồ kiến trúc ban đầu bằng draw.io.
+* Sơ đồ thể hiện được luồng người dùng đi qua Route 53, AWS WAF, CloudFront, S3, Application Load Balancer, backend server và database.
+* Em hiểu hơn cách một hệ thống web trên AWS có thể chia thành frontend, backend, database, networking và các dịch vụ hỗ trợ.
+* Sản phẩm của tuần này là bản sơ đồ kiến trúc đã được chỉnh sửa để dùng cho các phần báo cáo tiếp theo.

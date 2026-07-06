@@ -1,52 +1,33 @@
-﻿---
+---
 title: "Week 9 Worklog"
-date: 2026-04-17
+date: 2026-06-12
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
+
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Have a group meeting to decide the architecture topic for the project.
+* Identify the main AWS services that should be included in the diagram.
+* Use draw.io to create the first version of the architecture diagram.
+* Adjust the diagram layout so it is clearer and easier to use in the report.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| Friday | - Had a group meeting to discuss the project direction <br> - Agreed on a web system topic with frontend, backend, database, and basic security services | 12/06/2026 | 12/06/2026 | |
+| Monday | - Identified the main components needed in the architecture <br> - Selected AWS services such as Route 53, CloudFront, S3, ALB, Elastic Beanstalk/EC2, DocumentDB, and SES | 15/06/2026 | 15/06/2026 | <https://aws.amazon.com/architecture/> |
+| Tuesday | - Started drawing the architecture diagram on draw.io <br> - Divided the diagram into Region, VPC, public subnet, private subnet, and Availability Zone areas | 16/06/2026 | 16/06/2026 | <https://www.drawio.com/> |
+| Wednesday | - Added the user access flow into the system <br> - Added CloudFront, AWS WAF, S3 static website hosting, and Application Load Balancer | 17/06/2026 | 17/06/2026 | |
+| Thursday | - Adjusted the architecture diagram layout | 18/06/2026 | 18/06/2026 | |
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* The group agreed on the architecture topic for the project.
+* We identified the main AWS services that would appear in the diagram.
+* We created the first architecture diagram using draw.io.
+* The diagram shows the user flow through Route 53, AWS WAF, CloudFront, S3, Application Load Balancer, backend servers, and database.
+* I understood better how a web system on AWS can be separated into frontend, backend, database, networking, and supporting services.
+* The result of this week is the edited architecture diagram that can be used in the next report sections.
