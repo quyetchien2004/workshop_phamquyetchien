@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://quyetchien2004.github.io/workshop_phamquyetchien/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
